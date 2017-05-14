@@ -13,7 +13,7 @@ app.use(bodyParser());
 
 routes(app);
 
-const port = process.env.$PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   logger.info(`api started. listening on port ${port}`);
