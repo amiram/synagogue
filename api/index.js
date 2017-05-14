@@ -13,6 +13,6 @@ app.use(bodyParser());
 
 routes(app);
 
-app.listen(3000, () => {
+app.listen(proces.env.$PORT || 3000, () => {
   logger.info('api started');
 });
