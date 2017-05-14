@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Groups</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="userGroups">
+    <ion-list>
+      <button ion-item *ngFor="let userGroup of userGroups" (click)="itemTapped($event, item)">
+        {{userGroup.name}}
+      </button>
+    </ion-list>
+    <ion-fab>
+      <button ion-fab (click)="createGroup()">Create group</button>
+    </ion-fab>
+    <div text-center *ngIf="!userGroups.length">
+      <h3>You are not a member of any group</h3>
+      <button ion-button (click)="createGroup()">Create group</button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form #userForm="ngForm" *ngIf="user">
+    <ion-item>
+      <ion-label>Push</ion-label>
+      <ion-toggle [(ngModel)]="user.settings.push" name="push"></ion-toggle>
+    </ion-item>
+  </form>
+</ion-content>

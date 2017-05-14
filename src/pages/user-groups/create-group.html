@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="createGroup()">
+    <h3>Create new group</h3>
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="group.name" name="name"></ion-input>
+      </ion-item>
+    <button ion-button type="submit" block>Create group</button>
+  </form>
+</ion-content>
