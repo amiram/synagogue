@@ -8,6 +8,7 @@ async function updateUser(user) {
 }
 
 function getUser(userId) {
+  logger.info('get user', userId);
   return User.find({userId});
 }
 

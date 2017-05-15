@@ -17,6 +17,16 @@ routes(router);
 
 app.use('/api', router);
 
+app.use((err, req, res, next) => {
+  logger.error(err);
+  process.exit(1);
+});
+
+process.on('unhandledException', (err) => {
+  logger.error(err);
+  process.exit(1);
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
