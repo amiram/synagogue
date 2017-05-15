@@ -10,8 +10,12 @@ require('./db');
 
 app.use(cors());
 app.use(bodyParser());
+app.use(express.static('../www'));
 
-routes(app);
+const router = express.Router();
+routes(router);
+
+app.use('/api', router);
 
 const port = process.env.PORT || 3000;
 

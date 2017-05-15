@@ -7,7 +7,7 @@ function updateUser(req, res, next) {
 }
 
 function getUser(req, res, next) {
-  userService.getUser(req.params.id).then(user => {
+  userService.getUser(req.params.userId).then(user => {
     res.json(user);
   }).catch(next);
 }

@@ -6,4 +6,6 @@ const User = mongoose.model('User', new mongoose.Schema(userSchema, {
   collection: 'user',
 }));
 
+User.ensureIndexes();
+
 module.exports = User;
