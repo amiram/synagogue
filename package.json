@@ -44,7 +44,7 @@
     "zone.js": "^0.8.10"
   },
   "devDependencies": {
-    "@ionic/cli-plugin-ionic-angular": "^1.0.0",
+    "@ionic/cli-plugin-ionic-angular": "^1.0.0"
   },
   "engines": {
     "node": "7.10.0"
