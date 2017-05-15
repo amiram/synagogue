@@ -1,6 +1,5 @@
 module.exports = {
   db: {
-    url: 'mongodb://localhost/',
-    name: 'gabai',
+    url: 'mongodb://localhost/gabai',
   },
 };

@@ -4,6 +4,6 @@ const config = require('./config');
 
 mongoose.set("debug", true);
 
-mongoose.connect(`${config.db.url}${config.db.name}`).then(() => {
+mongoose.connect(`${config.db.url}`).then(() => {
   logger.info('db connected');
 });
