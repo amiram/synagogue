@@ -2,6 +2,7 @@ const all = require('./all');
 const fs = require('fs-promise');
 const path = require('path');
 const _ = require('lodash');
+const logger = require('../logger');
 
 const env = process.env.NODE_ENV;
 
