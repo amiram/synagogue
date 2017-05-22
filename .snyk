@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:ms:20170412':
+    - mongoose > ms:
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > express > send > ms':
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > express > serve-static > send > ms':
+        patched: '2017-05-22T03:44:11.855Z'
+    - mongoose > mquery > debug > ms:
+        patched: '2017-05-22T03:44:11.855Z'
+    - pm2 > pm2-axon > debug > ms:
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > express > debug > ms':
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > express > finalhandler > debug > ms':
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > express > send > debug > ms':
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > express > serve-static > send > debug > ms':
+        patched: '2017-05-22T03:44:11.855Z'
+    - '@ionic/app-scripts > tiny-lr > debug > ms':
+        patched: '2017-05-22T03:44:11.855Z'
