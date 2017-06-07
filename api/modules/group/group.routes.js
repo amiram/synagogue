@@ -1,10 +1,9 @@
 const groupController = require('./group.controller');
 
 module.exports = function (app) {
-  app.get('/group/:id', groupController.getGroup)
-    .post('/group', groupController.createGroup)
-    .put('/group/:id', groupController.addUserToGroup);
+  app.get('/groups/:id', groupController.getGroup)
+    .post('/groups', groupController.createGroup)
+    .patch('/groups/:id', groupController.addUserToGroup);
 
-  app.get('/group/user/:id', groupController.getUserGroups)
-    .post('/group/user', groupController.createGroup);
+  app.get('/users/:id/groups', groupController.getUserGroups);
 };

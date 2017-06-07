@@ -9,6 +9,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {SettingsPage} from "../pages/settings/settings";
 import {UserGroupsPage} from "../pages/user-groups/user-groups";
+import {LoginPage} from "../pages/login/login";
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +32,8 @@ export class MyApp {
       {title: 'Hello Ionic', component: HelloIonicPage},
       {title: 'My First List', component: ListPage},
       {title: 'Settings', component: SettingsPage, root: false},
-      {title: 'My Groups', component: UserGroupsPage}
+      {title: 'My Groups', component: UserGroupsPage},
+      {title: 'Login', component: LoginPage}
     ];
   }
 

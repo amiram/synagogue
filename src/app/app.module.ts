@@ -18,6 +18,21 @@ import {FormsModule} from "@angular/forms";
 import {UserGroupsService} from "../services/user-groups.service";
 import {UserGroupsPage} from "../pages/user-groups/user-groups";
 import {CreateGroupPage} from "../pages/user-groups/create-group";
+import {LoginPage} from "../pages/login/login";
+import {CloudSettings, CloudModule} from '@ionic/cloud-angular';
+import {GroupListComponent} from "../components/group-list/group-list.component";
+import {GroupListItemComponent} from "../components/group-list-item/group-list-item.component";
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '75cb2b04'
+  },
+  'auth': {
+    'google': {
+      'webClientId': '190021728074-qhfr9uiqj1itt1nm4a66kinpikrjb7eh.apps.googleusercontent.com\n',
+    }
+  }
+};
 
 @NgModule({
   declarations: [
@@ -27,13 +42,17 @@ import {CreateGroupPage} from "../pages/user-groups/create-group";
     ListPage,
     SettingsPage,
     UserGroupsPage,
-    CreateGroupPage
+    CreateGroupPage,
+    LoginPage,
+    GroupListComponent,
+    GroupListItemComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,6 +63,7 @@ import {CreateGroupPage} from "../pages/user-groups/create-group";
     SettingsPage,
     UserGroupsPage,
     CreateGroupPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

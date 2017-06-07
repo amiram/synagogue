@@ -12,15 +12,20 @@ export class UserGroupsService {
   }
 
   getUserGroups(userId) {
-    return this.userGroups.merge(this.http.get(`${this.config.gatewayUrl}/group/user/${userId}`)
+    return this.userGroups.merge(this.http.get(`${this.config.gatewayUrl}/users/${userId}/groups`)
       .map(response => response.json()));
   }
 
   createGroup(group) {
-    return this.http.post(`${this.config.gatewayUrl}/group/user`, group)
+    return this.http.post(`${this.config.gatewayUrl}/groups`, group)
       .map(r => r.json())
       .do(() => {
           this.userGroups.next(group);
       });
+  }
+
+  addUserToGroup(groupId, userId) {
+    return this.http.patch(`${this.config.gatewayUrl}/groups/${groupId}`, {userId})
+      .map(r => r.json());
   }
 }

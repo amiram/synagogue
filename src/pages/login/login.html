@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<form>
+  <h3>Login/Signup</h3>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="details.email" name="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="text" [(ngModel)]="details.password" name="password"></ion-input>
+  </ion-item>
+  <p>
+    <button ion-button color="primary" *ngIf="!auth.isAuthenticated()" (click)="login()">Login</button>
+    <button ion-button color="primary" *ngIf="!auth.isAuthenticated()" (click)="loginWithGoogle()">Login With Google</button>
+    <button ion-button color="primary" *ngIf="!auth.isAuthenticated()" (click)="signup()">Signup</button>
+    <button ion-button color="primary" *ngIf="!auth.isAuthenticated()" (click)="passwordReset()">Reset Password</button>
+    <button ion-button color="primary" *ngIf="auth.isAuthenticated()" (click)="logout()">Logout</button>
+  </p>
+
+</form>
+</ion-content>

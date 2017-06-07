@@ -2,6 +2,7 @@ const groupService = require('./group.service');
 
 function getGroup(req, res, next) {
   const id = req.params.id;
+  console.log('get group');
   groupService.getGroup(id).then(group => {
     res.json(group);
   }).catch(next);

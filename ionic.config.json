@@ -1,5 +1,5 @@
 {
   "name": "tutorial",
-  "app_id": "",
+  "app_id": "https://api.ionic.io/auth/integrations/google?app_id=75cb2b04",
   "type": "ionic-angular"
 }

@@ -18,9 +18,7 @@ export class SettingsPage implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(user => {
-      this.user = user;
-    });
+    this.user = this.userService.user;
   }
 
   ngOnDestroy(): void {
