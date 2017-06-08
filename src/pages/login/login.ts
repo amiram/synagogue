@@ -22,9 +22,13 @@ export class LoginPage {
   }
 
   login() {
-    return this.auth.login('basic', this.details).then(() => {
-      this.userService.user = this.user;
-    });
+    return this.auth.login('basic', this.details)
+      .then(() => {
+        this.userService.user = this.user;
+      })
+      .catch(() => {
+
+      });
   }
 
   loginWithGoogle() {

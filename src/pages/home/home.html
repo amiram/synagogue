@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Groups</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <h3>My Groups</h3>
+  <div *ngIf="groups; then myGroupsLoaded else myGroupsLoading">
+  </div>
+  <template #myGroupsLoaded>
+    <group-list [groups]="groups" *ngIf="groups.length"></group-list>
+    <h4 *ngIf="!groups.length">You don't have any groups yet</h4>
+  </template>
+  <template #myGroupsLoading>
+    Loading...
+  </template>
+
+  <ion-fab right bottom>
+    <button ion-fab (click)="addGroup()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  <!--<h3>Groups nearby</h3>-->
+  <!--<group-list [groups]="groups"></group-list>-->
+
+</ion-content>
