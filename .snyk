@@ -1,0 +1,14 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - '@ionic/app-scripts > express > debug':
+        patched: '2017-10-02T03:44:12.449Z'
+    - '@ionic/app-scripts > express > send > debug':
+        patched: '2017-10-02T03:44:12.449Z'
+    - '@ionic/app-scripts > express > serve-static > send > debug':
+        patched: '2017-10-02T03:44:12.449Z'
+    - '@ionic/app-scripts > tiny-lr > debug':
+        patched: '2017-10-02T03:44:12.449Z'
