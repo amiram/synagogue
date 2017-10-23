@@ -1,103 +1,103 @@
 {
-    "name": "ionic-hello-world",
-    "version": "0.0.0",
-    "author": "Ionic Framework",
-    "homepage": "http://ionicframework.com/",
-    "private": true,
-    "scripts": {
-        "start": "pm2 start --attach api/ecosystem.config.js",
-        "clean": "ionic-app-scripts clean",
-        "build": "ionic-app-scripts build",
-        "lint": "ionic-app-scripts lint",
-        "ionic:build": "ionic-app-scripts build",
-        "ionic:serve": "ionic-app-scripts serve",
-        "heroku-postbuild": "npm run build -- --release --prod"
+  "name": "ionic-hello-world",
+  "version": "0.0.0",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "start": "pm2 start --attach api/ecosystem.config.js",
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve",
+    "heroku-postbuild": "npm run build -- --release --prod"
+  },
+  "dependencies": {
+    "@angular/common": "4.1.0",
+    "@angular/compiler": "4.1.0",
+    "@angular/compiler-cli": "4.1.0",
+    "@angular/core": "4.1.0",
+    "@angular/forms": "4.1.0",
+    "@angular/http": "4.1.0",
+    "@angular/platform-browser": "4.1.0",
+    "@angular/platform-browser-dynamic": "4.1.0",
+    "@auth0/cordova": "^0.1.0",
+    "@ionic-native/core": "3.6.1",
+    "@ionic-native/splash-screen": "3.6.1",
+    "@ionic-native/status-bar": "3.6.1",
+    "@ionic/app-scripts": "3.0.1",
+    "@ionic/cloud-angular": "^0.12.0",
+    "@ionic/storage": "2.0.1",
+    "angular2-jwt": "^0.2.3",
+    "auth0-js": "^8.6.1",
+    "auth0-lock": "^10.16.0",
+    "body-parser": "^1.17.1",
+    "concurrently": "^3.4.0",
+    "cordova-android": "^6.2.3",
+    "cordova-plugin-console": "1.0.5",
+    "cordova-plugin-customurlscheme": "^4.2.0",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-googleplus": "^5.1.1",
+    "cordova-plugin-inappbrowser": "^0.2.2",
+    "cordova-plugin-safariviewcontroller": "^1.4.7",
+    "cordova-plugin-splashscreen": "~4.0.1",
+    "cordova-plugin-statusbar": "2.2.2",
+    "cordova-plugin-whitelist": "1.3.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "fs-promise": "^2.0.3",
+    "ionic-angular": "3.2.0",
+    "ionic-plugin-keyboard": "~2.2.1",
+    "ionicons": "3.0.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.10.4",
+    "pm2": "^2.4.6",
+    "rxjs": "5.1.1",
+    "sw-toolbox": "3.4.0",
+    "typescript": "~2.2.1",
+    "winston": "^2.3.1",
+    "zone.js": "^0.8.10"
+  },
+  "devDependencies": {
+    "@ionic/cli-plugin-cordova": "^1.3.0",
+    "@ionic/cli-plugin-ionic-angular": "^1.3.0"
+  },
+  "engines": {
+    "node": "7.10.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [],
+  "description": "tutorial: An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-safariviewcontroller": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "com.amiram.synagogue",
+        "ANDROID_SCHEME": "com.amiram.synagogue",
+        "ANDROID_HOST": "synagogue.eu.auth0.com",
+        "ANDROID_PATHPREFIX": "/cordova/com.amiram.synagogue/callback"
+      },
+      "org.apache.cordova.inappbrowser": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "myreversedclientid"
+      }
     },
-    "dependencies": {
-        "@angular/common": "4.1.0",
-        "@angular/compiler": "4.1.0",
-        "@angular/compiler-cli": "4.1.0",
-        "@angular/core": "4.1.0",
-        "@angular/forms": "4.1.0",
-        "@angular/http": "4.1.0",
-        "@angular/platform-browser": "4.1.0",
-        "@angular/platform-browser-dynamic": "4.1.0",
-        "@auth0/cordova": "^0.1.0",
-        "@ionic-native/core": "3.6.1",
-        "@ionic-native/splash-screen": "3.6.1",
-        "@ionic-native/status-bar": "3.6.1",
-        "@ionic/app-scripts": "1.3.7",
-        "@ionic/cloud-angular": "^0.12.0",
-        "@ionic/storage": "2.0.1",
-        "angular2-jwt": "^0.2.3",
-        "auth0-js": "^8.6.1",
-        "auth0-lock": "^10.16.0",
-        "body-parser": "^1.17.1",
-        "concurrently": "^3.4.0",
-        "cordova-android": "^6.2.3",
-        "cordova-plugin-console": "1.0.5",
-        "cordova-plugin-customurlscheme": "^4.2.0",
-        "cordova-plugin-device": "1.1.4",
-        "cordova-plugin-googleplus": "^5.1.1",
-        "cordova-plugin-inappbrowser": "^0.2.2",
-        "cordova-plugin-safariviewcontroller": "^1.4.7",
-        "cordova-plugin-splashscreen": "~4.0.1",
-        "cordova-plugin-statusbar": "2.2.2",
-        "cordova-plugin-whitelist": "1.3.1",
-        "cors": "^2.8.3",
-        "express": "^4.15.2",
-        "fs-promise": "^2.0.3",
-        "ionic-angular": "3.2.0",
-        "ionic-plugin-keyboard": "~2.2.1",
-        "ionicons": "3.0.0",
-        "lodash": "^4.17.4",
-        "mongoose": "^4.10.4",
-        "pm2": "^2.4.6",
-        "rxjs": "5.1.1",
-        "sw-toolbox": "3.4.0",
-        "typescript": "~2.2.1",
-        "winston": "^2.3.1",
-        "zone.js": "^0.8.10"
-    },
-    "devDependencies": {
-        "@ionic/cli-plugin-cordova": "^1.3.0",
-        "@ionic/cli-plugin-ionic-angular": "^1.3.0"
-    },
-    "engines": {
-        "node": "7.10.0"
-    },
-    "cordovaPlugins": [
-        "cordova-plugin-whitelist",
-        "cordova-plugin-console",
-        "cordova-plugin-device",
-        "cordova-plugin-splashscreen",
-        "cordova-plugin-statusbar",
-        "ionic-plugin-keyboard"
-    ],
-    "cordovaPlatforms": [],
-    "description": "tutorial: An Ionic project",
-    "cordova": {
-        "plugins": {
-            "cordova-plugin-safariviewcontroller": {},
-            "cordova-plugin-customurlscheme": {
-                "URL_SCHEME": "com.amiram.synagogue",
-                "ANDROID_SCHEME": "com.amiram.synagogue",
-                "ANDROID_HOST": "synagogue.eu.auth0.com",
-                "ANDROID_PATHPREFIX": "/cordova/com.amiram.synagogue/callback"
-            },
-            "org.apache.cordova.inappbrowser": {},
-            "cordova-plugin-console": {},
-            "cordova-plugin-device": {},
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-statusbar": {},
-            "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {},
-            "cordova-plugin-googleplus": {
-                "REVERSED_CLIENT_ID": "myreversedclientid"
-            }
-        },
-        "platforms": [
-            "android"
-        ]
-    }
+    "platforms": [
+      "android"
+    ]
+  }
 }
