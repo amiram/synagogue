@@ -34,7 +34,7 @@
         "auth0-lock": "^10.16.0",
         "body-parser": "^1.17.1",
         "concurrently": "^3.4.0",
-        "cordova-android": "^6.2.3",
+        "cordova-android": "^8.0.0",
         "cordova-plugin-console": "1.0.5",
         "cordova-plugin-customurlscheme": "^4.2.0",
         "cordova-plugin-device": "1.1.4",
