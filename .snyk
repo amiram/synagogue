@@ -1,0 +1,14 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.3
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - '@ionic/cloud-angular > @ionic/cloud > superagent > extend':
+        patched: '2019-04-08T22:54:01.427Z'
+  'npm:mime:20170907':
+    - '@ionic/cloud-angular > @ionic/cloud > superagent > mime':
+        patched: '2019-04-08T22:54:01.427Z'
+  'npm:semver:20150403':
+    - '@ionic/app-scripts > rollup-plugin-node-builtins > browserify-fs > levelup > semver':
+        patched: '2019-04-08T22:54:01.427Z'
